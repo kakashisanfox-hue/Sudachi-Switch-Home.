@@ -22,10 +22,13 @@ jobs:
           java-version: '17'
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        run: |
+          echo "ANDROID_HOME=$ANDROID_SDK_ROOT" >> "$GITHUB_ENV"
+          yes | sdkmanager --licenses || true
 
       - name: Install Android NDK
-        run: sdkmanager "ndk;26.2.11394342"
+        run: |
+          sdkmanager --install "ndk;26.2.11394342"
 
       - name: Build Android APK
         working-directory: src/android
