@@ -58,7 +58,7 @@ CMAKE_DEPENDENT_OPTION(SUDACHI_CRASH_DUMPS "Compile crash dump (Minidump) suppor
 
 option(SUDACHI_USE_BUNDLED_VCPKG "Use vcpkg for sudachi dependencies" "${MSVC}")
 
-option(SUDACHI_CHECK_SUBMODULES "Check if submodules are present" ON)
+option(SUDACHI_CHECK_SUBMODULES "Check if submodules are present" OFF)
 
 option(SUDACHI_ENABLE_LTO "Enable link-time optimization" OFF)
 
